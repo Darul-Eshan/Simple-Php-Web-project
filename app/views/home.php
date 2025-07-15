@@ -1,32 +1,4 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="assets\css\bootstrap.css">
-
-    <title>My php project</title>
-</head>
-<body>
- <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-    <div class="container">
-        <a href="#" class="navbar-brand">My PHP Project</a>
-        <ul class="navbar-nav ms-auto">
-            <li class="nav-item">
-                <a href="#" class="nav-link">Home</a>
-            </li>
-            <li class="nav-item">
-                <a href="#" class="nav-link">About</a>
-            </li>
-            <li class="nav-item">
-                <a href="#" class="nav-link">Image</a>
-            </li>
-            <li class="nav-item">
-                <a href="#" class="nav-link">Contact</a>
-            </li>
-        </ul>
-    </div>
-</nav>
+<?php include "header.php"; ?>
     <section class="py-5 bg-danger-subtle">
         <div class="container">
             <div class="row">
@@ -39,7 +11,9 @@
                             <h4><?php echo $product['name'];?></h4>
                             <p><?php echo $product['price'];?></p>
                             <p><?php echo $product['description'];?></p>
-                        
+                        <hr/>
+                            <a href="web.php?page=detail&id=<?php echo $product['id'] ?>" class="btn btn-success">Details</a>
+
                         </div>
                     </div>
                 </div>
@@ -47,7 +21,6 @@
             </div>
         </div>
     </section>
+    <?php include "footer.php"; ?>
     
-    <script src="assets\js\bootstrap.bundle.js"></script>
-</body>
-</html>
+  
